@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <title>Trivia</title>
+    <link rel = "stylesheet"
+     type = "text/css"
+     href = "myStyle.css" />
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var count = 0;
+        $('#count').html("Total: " + count);
+        $.get("https://opentdb.com/api.php?amount=10&category=21&difficulty=medium&type=multiple", function(data){
+          $('#sports_question200q').html(data.results[0]['question']);
+          $('#sports200_answer1').html(data.results[0]['incorrect_answers'][0]);
+          $('#sports200_answer2').html(data.results[0]['incorrect_answers'][2]);
+          $('#sports200_answer3').html(data.results[0]['correct_answer']);
+          $('#sports200_answer4').html(data.results[0]['incorrect_answers'][1]);
+          $('#sports_question200').click(function(){
+            $('#sports200q').hide();
+            $('#sports200_answer1_radio').show();
+            $('#sports_question200q').show();
+            $('#sports_answers200').show();
+            $('#sports200_answer1_radio').click(function(){
+              $('#sports_question200').empty();
+              $('#sports_question200').append("<p id='wrong'> WRONG BRO </p>");
+            });
+            $('#sports200_answer2_radio').click(function(){
+              $('#sports_question200').empty();
+              $('#sports_question200').append("<p id='wrong'> WRONG BRO </p>");
+            });
+            $('#sports200_answer3_radio').click(function(){
+              $('#sports_question200').empty();
+              $('#sports_question200').append("<p id='correct'> CORRECT </p>");
+              count += 200;
+              $('#count').html("Total: " + count);
+            });
+            $('#sports200_answer4_radio').click(function(){
+              $('#sports_question200').empty();
+              $('#sports_question200').append("<p id='wrong'> WRONG BRO </p>");
+            });
+          })
+        });
+
+        $.get("https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple", function(data){
+          $('#sports_question100q').html(data.results[0]['question']);
+          $('#sports100_answer1').html(data.results[0]['incorrect_answers'][0]);
+          $('#sports100_answer2').html(data.results[0]['incorrect_answers'][2]);
+          $('#sports100_answer3').html(data.results[0]['correct_answer']);
+          $('#sports100_answer4').html(data.results[0]['incorrect_answers'][1]);
+          $('#sports_question100').click(function(){
+            $('#sports100q').hide();
+            $('#sports100_answer1_radio').show();
+            $('#sports_question100q').show();
+            $('#sports_answers100').show();
+            $('#sports100_answer1_radio').click(function(){
+              $('#sports_question100').empty();
+              $('#sports_question100').append("<p id='wrong'> WRONG BRO </p>");
+            });
+            $('#sports100_answer2_radio').click(function(){
+              $('#sports_question100').empty();
+              $('#sports_question100').append("<p id='wrong'> WRONG BRO </p>");
+            });
+            $('#sports100_answer3_radio').click(function(){
+              $('#sports_question100').empty();
+              $('#sports_question100').append("<p id='correct'> CORRECT </p>");
+              count += 100;
+              $('#count').html("Total: " + count);
+            });
+            $('#sports100_answer4_radio').click(function(){
+              $('#sports_question100').empty();
+              $('#sports_question100').append("<p id='wrong'> WRONG BRO </p>");
+            });
+          })
+        });
+
+        $.get("https://opentdb.com/api.php?amount=1&category=21&difficulty=hard&type=multiple", function(data){
+          $('#sports_question300q').html(data.results[0]['question']);
+          $('#sports300_answer1').html(data.results[0]['incorrect_answers'][0]);
+          $('#sports300_answer2').html(data.results[0]['incorrect_answers'][2]);
+          $('#sports300_answer3').html(data.results[0]['correct_answer']);
+          $('#sports300_answer4').html(data.results[0]['incorrect_answers'][1]);
+          $('#sports_question300').click(function(){
+            $('#sports300q').hide();
+            $('#sports300_answer1_radio').show();
+            $('#sports_question300q').show();
+            $('#sports_answers300').show();
+            $('#sports300_answer1_radio').click(function(){
+              $('#sports_question300').empty();
+              $('#sports_question300').append("<p id='wrong'> WRONG BRO </p>");
+            });
+            $('#sports300_answer2_radio').click(function(){
+              $('#sports_question300').empty();
+              $('#sports_question300').append("<p id='wrong'> WRONG BRO </p>");
+            });
+            $('#sports300_answer3_radio').click(function(){
+              $('#sports_question300').empty();
+              $('#sports_question300').append("<p id='correct'> CORRECT </p>");
+              count += 300;
+              $('#count').html("Total: " + count);
+            });
+            $('#sports300_answer4_radio').click(function(){
+              $('#sports_question300').empty();
+              $('#sports_question300').append("<p id='wrong'> WRONG BRO </p>");
+            });
+          })
+        });
+
+        $.get("https://opentdb.com/api.php?amount=1&category=27&difficulty=easy&type=multiple", function(data){
+          $('#animals_question100q').html(data.results[0]['question']);
+          $('#animals100_answer1').html(data.results[0]['incorrect_answers'][0]);
+          $('#animals100_answer2').html(data.results[0]['incorrect_answers'][2]);
+          $('#animals100_answer3').html(data.results[0]['correct_answer']);
+          $('#animals100_answer4').html(data.results[0]['incorrect_answers'][1]);
+          $('#animals_question100').click(function(){
+            $('#animals100q').hide();
+            $('#animals100_answer1_radio').show();
+            $('#animals_question100q').show();
+            $('#animals_answers100').show();
+            $('#animals100_answer1_radio').click(function(){
+              $('#animals_question100').empty();
+              $('#animals_question100').append("<p id='wrong'> WRONG BRO </p>");
+            });
+            $('#animals100_answer2_radio').click(function(){
+              $('#animals_question100').empty();
+              $('#animals_question100').append("<p id='wrong'> WRONG BRO </p>");
+            });
+            $('#animals100_answer3_radio').click(function(){
+              $('#animals_question100').empty();
+              $('#animals_question100').append("<p id='correct'> CORRECT </p>");
+              count += 100;
+              $('#count').html("Total: " + count);
+            });
+            $('#animals100_answer4_radio').click(function(){
+              $('#animals_question100').empty();
+              $('#animals_question100').append("<p id='wrong'> WRONG BRO </p>");
+            });
+          })
+        });
+
+        $.get("https://opentdb.com/api.php?amount=1&category=27&difficulty=medium&type=multiple", function(data){
+          $('#animals_question200q').html(data.results[0]['question']);
+          $('#animals200_answer1').html(data.results[0]['incorrect_answers'][0]);
+          $('#animals200_answer2').html(data.results[0]['incorrect_answers'][2]);
+          $('#animals200_answer3').html(data.results[0]['correct_answer']);
+          $('#animals200_answer4').html(data.results[0]['incorrect_answers'][1]);
+          $('#animals_question200').click(function(){
+            $('#animals200q').hide();
+            $('#animals200_answer1_radio').show();
+            $('#animals_question200q').show();
+            $('#animals_answers200').show();
+            $('#animals200_answer1_radio').click(function(){
+              $('#animals_question200').empty();
+              $('#animals_question200').append("<p id='wrong'> WRONG BRO </p>");
+            });
+            $('#animals200_answer2_radio').click(function(){
+              $('#animals_question200').empty();
+              $('#animals_question200').append("<p id='wrong'> WRONG BRO </p>");
+            });
+            $('#animals200_answer3_radio').click(function(){
+              $('#animals_question200').empty();
+              $('#animals_question200').append("<p id='correct'> CORRECT </p>");
+              count += 200;
+              $('#count').html("Total: " + count);
+            });
+            $('#animals200_answer4_radio').click(function(){
+              $('#animals_question200').empty();
+              $('#animals_question200').append("<p id='wrong'> WRONG BRO </p>");
+            });
+          })
+        });
+
+        $.get("https://opentdb.com/api.php?amount=1&category=27&difficulty=hard&type=multiple", function(data){
+          $('#animals_question300q').html(data.results[0]['question']);
+          $('#animals300_answer1').html(data.results[0]['incorrect_answers'][0]);
+          $('#animals300_answer2').html(data.results[0]['incorrect_answers'][2]);
+          $('#animals300_answer3').html(data.results[0]['correct_answer']);
+          $('#animals300_answer4').html(data.results[0]['incorrect_answers'][1]);
+          $('#animals_question300').click(function(){
+            $('#animals300q').hide();
+            $('#animals300_answer1_radio').show();
+            $('#animals_question300q').show();
+            $('#animals_answers300').show();
+            $('#animals300_answer1_radio').click(function(){
+              $('#animals_question300').empty();
+              $('#animals_question300').append("<p id='wrong'> WRONG BRO </p>");
+            });
+            $('#animals300_answer2_radio').click(function(){
+              $('#animals_question300').empty();
+              $('#animals_question300').append("<p id='wrong'> WRONG BRO </p>");
+            });
+            $('#animals300_answer3_radio').click(function(){
+              $('#animals_question300').empty();
+              $('#animals_question300').append("<p id='correct'> CORRECT </p>");
+              count += 300;
+              $('#count').html("Total: " + count);
+            });
+            $('#animals300_answer4_radio').click(function(){
+              $('#animals_question300').empty();
+              $('#animals_question300').append("<p id='wrong'> WRONG BRO </p>");
+            });
+          })
+        });
+
+        $.get("https://opentdb.com/api.php?amount=1&category=11&difficulty=easy&type=multiple", function(data){
+          $('#film_question100q').html(data.results[0]['question']);
+          $('#film100_answer1').html(data.results[0]['incorrect_answers'][0]);
+          $('#film100_answer2').html(data.results[0]['incorrect_answers'][2]);
+          $('#film100_answer3').html(data.results[0]['correct_answer']);
+          $('#film100_answer4').html(data.results[0]['incorrect_answers'][1]);
+          $('#film_question100').click(function(){
+            $('#film100q').hide();
+            $('#film100_answer1_radio').show();
+            $('#film_question100q').show();
+            $('#film_answers100').show();
+            $('#film100_answer1_radio').click(function(){
+              $('#film_question100').empty();
+              $('#film_question100').append("<p id='wrong'> WRONG BRO </p>");
+            });
+            $('#film100_answer2_radio').click(function(){
+              $('#film_question100').empty();
+              $('#film_question100').append("<p id='wrong'> WRONG BRO </p>");
+            });
+            $('#film100_answer3_radio').click(function(){
+              $('#film_question100').empty();
+              $('#film_question100').append("<p id='correct'> CORRECT </p>");
+              count += 100;
+              $('#count').html("Total: " + count);
+            });
+            $('#film100_answer4_radio').click(function(){
+              $('#film_question100').empty();
+              $('#film_question100').append("<p id='wrong'> WRONG BRO </p>");
+            });
+          })
+        });
+
+        $.get("https://opentdb.com/api.php?amount=1&category=11&difficulty=medium&type=multiple", function(data){
+          $('#film_question200q').html(data.results[0]['question']);
+          $('#film200_answer1').html(data.results[0]['incorrect_answers'][0]);
+          $('#film200_answer2').html(data.results[0]['incorrect_answers'][2]);
+          $('#film200_answer3').html(data.results[0]['correct_answer']);
+          $('#film200_answer4').html(data.results[0]['incorrect_answers'][1]);
+          $('#film_question200').click(function(){
+            $('#film200q').hide();
+            $('#film200_answer1_radio').show();
+            $('#film_question200q').show();
+            $('#film_answers200').show();
+            $('#film200_answer1_radio').click(function(){
+              $('#film_question200').empty();
+              $('#film_question200').append("<p id='wrong'> WRONG BRO </p>");
+            });
+            $('#film200_answer2_radio').click(function(){
+              $('#film_question200').empty();
+              $('#film_question200').append("<p id='wrong'> WRONG BRO </p>");
+            });
+            $('#film200_answer3_radio').click(function(){
+              $('#film_question200').empty();
+              $('#film_question200').append("<p id='correct'> CORRECT </p>");
+              count += 200;
+              $('#count').html("Total: " + count);
+            });
+            $('#film200_answer4_radio').click(function(){
+              $('#film_question200').empty();
+              $('#film_question200').append("<p id='wrong'> WRONG BRO </p>");
+            });
+          })
+        });
+
+        $.get("https://opentdb.com/api.php?amount=1&category=11&difficulty=hard&type=multiple", function(data){
+          $('#film_question300q').html(data.results[0]['question']);
+          $('#film300_answer1').html(data.results[0]['incorrect_answers'][0]);
+          $('#film300_answer2').html(data.results[0]['incorrect_answers'][2]);
+          $('#film300_answer3').html(data.results[0]['correct_answer']);
+          $('#film300_answer4').html(data.results[0]['incorrect_answers'][1]);
+          $('#film_question300').click(function(){
+            $('#film300q').hide();
+            $('#film300_answer1_radio').show();
+            $('#film_question300q').show();
+            $('#film_answers300').show();
+            $('#film300_answer1_radio').click(function(){
+              $('#film_question300').empty();
+              $('#film_question300').append("<p id='wrong'> WRONG BRO </p>");
+            });
+            $('#film300_answer2_radio').click(function(){
+              $('#film_question300').empty();
+              $('#film_question300').append("<p id='wrong'> WRONG BRO </p>");
+            });
+            $('#film300_answer3_radio').click(function(){
+              $('#film_question300').empty();
+              $('#film_question300').append("<p id='correct'> CORRECT </p>");
+              count += 300;
+              $('#count').html("Total: " + count);
+            });
+            $('#film300_answer4_radio').click(function(){
+              $('#film_question300').empty();
+              $('#film_question300').append("<p id='wrong'> WRONG BRO </p>");
+            });
+          })
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="center">Trivia Night</h1><br>
+      <h5 class="center" id='count'></h5><br>
+
+      <div class="left">
+        <h3>Sports</h3><br>
+        <div class="question" id="sports_question100">
+          <p class='centerp' id="sports100q">100</p>
+          <p id="sports_question100q" class="hide"></p><br>
+          <div id="sports_answers100" class="answer_box">
+            <input class="radiohead" type="radio" id="sports100_answer1_radio"><p id="sports100_answer1" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="sports100_answer2_radio"><p id="sports100_answer2" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="sports100_answer3_radio"><p id="sports100_answer3" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="sports100_answer4_radio"><p id="sports100_answer4" class="display_inline"></p><br>
+          </div>
+        </div><br>
+
+        <div class="question" id="sports_question200">
+          <p class='centerp' id="sports200q">200</p>
+          <p id="sports_question200q" class="hide"></p><br>
+          <div id="sports_answers200" class="answer_box">
+            <input class="radiohead" type="radio" id="sports200_answer1_radio"><p id="sports200_answer1" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="sports200_answer2_radio"><p id="sports200_answer2" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="sports200_answer3_radio"><p id="sports200_answer3" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="sports200_answer4_radio"><p id="sports200_answer4" class="display_inline"></p><br>
+          </div>
+        </div><br>
+
+        <div class="question" id="sports_question300">
+          <p class='centerp' id="sports300q">300</p>
+          <p id="sports_question300q" class="hide"></p><br>
+          <div id="sports_answers300" class="answer_box">
+            <input class="radiohead" type="radio" id="sports300_answer1_radio"><p id="sports300_answer1" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="sports300_answer2_radio"><p id="sports300_answer2" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="sports300_answer3_radio"><p id="sports300_answer3" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="sports300_answer4_radio"><p id="sports300_answer4" class="display_inline"></p><br>
+          </div>
+        </div><br>
+      </div>
+
+      <div class="middle">
+        <h3>Animals</h3><br>
+        <div class="question" id="animals_question100">
+          <p class='centerp' id="animals100q">100</p>
+          <p id="animals_question100q" class="hide"></p><br>
+          <div id="animals_answers100" class="answer_box">
+            <input class="radiohead" type="radio" id="animals100_answer1_radio"><p id="animals100_answer1" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="animals100_answer2_radio"><p id="animals100_answer2" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="animals100_answer3_radio"><p id="animals100_answer3" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="animals100_answer4_radio"><p id="animals100_answer4" class="display_inline"></p><br>
+          </div>
+        </div><br>
+
+        <div class="question" id="animals_question200">
+          <p class='centerp' id="animals200q">200</p>
+          <p id="animals_question200q" class="hide"></p><br>
+          <div id="animals_answers200" class="answer_box">
+            <input class="radiohead" type="radio" id="animals200_answer1_radio"><p id="animals200_answer1" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="animals200_answer2_radio"><p id="animals200_answer2" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="animals200_answer3_radio"><p id="animals200_answer3" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="animals200_answer4_radio"><p id="animals200_answer4" class="display_inline"></p><br>
+          </div>
+        </div><br>
+
+        <div class="question" id="animals_question300">
+          <p class='centerp' id="animals300q">300</p>
+          <p id="animals_question300q" class="hide"></p><br>
+          <div id="animals_answers300" class="answer_box">
+            <input class="radiohead" type="radio" id="animals300_answer1_radio"><p id="animals300_answer1" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="animals300_answer2_radio"><p id="animals300_answer2" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="animals300_answer3_radio"><p id="animals300_answer3" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="animals300_answer4_radio"><p id="animals300_answer4" class="display_inline"></p><br>
+          </div>
+        </div><br>
+      </div>
+
+      <div class="right">
+        <h3>Film</h3><br>
+        <div class="question" id="film_question100">
+          <p class='centerp' id="film100q">100</p>
+          <p id="film_question100q" class="hide"></p><br>
+          <div id="film_answers100" class="answer_box">
+            <input class="radiohead" type="radio" id="film100_answer1_radio"><p id="film100_answer1" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="film100_answer2_radio"><p id="film100_answer2" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="film100_answer3_radio"><p id="film100_answer3" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="film100_answer4_radio"><p id="film100_answer4" class="display_inline"></p><br>
+          </div>
+        </div><br>
+
+        <div class="question" id="film_question200">
+          <p class='centerp' id="film200q">200</p>
+          <p id="film_question200q" class="hide"></p><br>
+          <div id="film_answers200" class="answer_box">
+            <input class="radiohead" type="radio" id="film200_answer1_radio"><p id="film200_answer1" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="film200_answer2_radio"><p id="film200_answer2" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="film200_answer3_radio"><p id="film200_answer3" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="film200_answer4_radio"><p id="film200_answer4" class="display_inline"></p><br>
+          </div>
+        </div><br>
+
+        <div class="question" id="film_question300">
+          <p class='centerp' id="film300q">300</p>
+          <p id="film_question300q" class="hide"></p><br>
+          <div id="film_answers300" class="answer_box">
+            <input class="radiohead" type="radio" id="film300_answer1_radio"><p id="film300_answer1" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="film300_answer2_radio"><p id="film300_answer2" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="film300_answer3_radio"><p id="film300_answer3" class="display_inline"></p><br>
+            <input class="radiohead" type="radio" id="film300_answer4_radio"><p id="film300_answer4" class="display_inline"></p><br>
+          </div>
+        </div><br>
+      </div>
+    </div>
+  </body>
+</html>
